@@ -1,7 +1,17 @@
 ---
+const yearOfInitialPublishing = 2025;
+const currnetYear = new Date().getFullYear();
 
+let copyRightDateString = "No Date Set!!!";
+
+if (currnetYear == yearOfInitialPublishing) {
+  copyRightDateString = currnetYear.toString();
+} else {
+  copyRightDateString =
+    yearOfInitialPublishing.toString() + "-" + currnetYear.toString();
+}
 ---
 
 <footer>
-  <p>footer &copy;</p>
+  <p>&copy; {copyRightDateString} Hemanth B. All Rights Reserved</p>
 </footer>
